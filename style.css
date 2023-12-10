@@ -1,0 +1,104 @@
+*{font-family: 'Scope One', serif;
+/* background-color: black; */
+} 
+
+.top img{
+  width: 100%; /* ширина на весь экран */
+  height: 420px; /*  */
+}
+.header{
+    position: relative;
+    padding-bottom: 25px;
+}
+.container-header{
+    position: absolute;
+    top: 50%;
+    /* отступ сверха 50% */
+    width: 100%; /* занимает 100% ширины */
+    text-align: center; /* расположение текста по центру */
+} 
+.container-header h1{
+    font-family: Noto Serif Display;
+    color: #f9f9f9;
+    font-size: 60px;    
+    font-weight: 300; /* устанавливаем насыщенность шрифта */
+    font-variant: small-caps; /*Модифицирует все строчные символы как заглавные уменьшенного размера */
+}
+.links{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+    /* background-color: rgb(0, 0, 0, 0.2); */
+    }
+.links a{
+    text-decoration: none;
+    font-size: 25px;
+    width: 80%;
+    color: #f9f9f9;
+} 
+.container{
+    max-width: 1200px;
+    width: 100%; /* занимает 100% ширины */
+    margin: auto;
+}
+.about{
+    padding-top: 20px;    /* отступ сверху */
+    width: 100%; /* занимает 100% ширины */
+    text-align: center; /* расположение текста по центру */
+} 
+.about h2{
+    font-size: 45px;
+    font-weight: 400;
+}
+.about p{
+    font-size: 30px;
+    line-height: 50px;     /* расстояние между строками */
+}
+
+
+
+.footer{
+    padding-top: 25px;
+}
+.footer-block{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+
+
+.carousel-inner img{
+    filter: brightness(70%); /* затемнение картинок на слайде */
+}
+.carousel-inner h5{
+    font-size: 45px;
+}
+.carousel-inner p{
+    font-size: 20px;
+}
+.carousel-caption d-none d-md-block{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* vertical-align: middle; */
+}
+
+
+.contact-block{
+    display: flex;
+}
+.contacts{
+    padding-left: 20px;
+}
+.map{
+    padding-top: 40px;
+}
+.contacts h2{
+    font-size: 45px;
+    font-weight: 400;
+}
+.contacts p{
+    font-size: 25px;
+}
