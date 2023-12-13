@@ -11,12 +11,11 @@
     font-style: normal;
 }
 *{font-family: noto;
-/* background-color: black; */
 } 
 
 .top img{
   width: 100%; /* ширина на весь экран */
-  height: 270px; /*  */
+  height: 300px;
 }
 .header{
     position: relative;
@@ -37,20 +36,17 @@
     font-variant: small-caps; /*Модифицирует все строчные символы как заглавные уменьшенного размера */
 }
 .links{
-    /* margin: auto; */
     display: flex;
     justify-content: space-between;
 }
 .links a{
     text-decoration: none;
     font-size: 25px;
-    width: 80%;
     color: #f9f9f9;
 } 
 .container{
     max-width: 1000px;
     width: 100%; /* занимает 100% ширины */
-    margin: auto;
 }
 .about{
     padding-top: 20px;    /* отступ сверху */
@@ -61,9 +57,8 @@
 h2{
     text-align: center; /*расположение текста по центру */
     font-size: 35px;
-    font-weight: 400;
 }
-.about p{
+.about p, .step p{
     text-align: center; /*расположение текста по центру */
     font-size: 20px;
     line-height: 50px;     /* расстояние между строками */
@@ -74,11 +69,6 @@ h2{
     padding-top: 20px;  /* отступ сверху */
     padding-bottom: 30px;
     /* width: 100%; занимает 100% ширины */
-} 
-.step p{ 
-    text-align: center; /*расположение текста по центру */
-    font-size: 20px;
-    line-height: 50px;     /* расстояние между строками */
 } 
 .steps{
     display: flex;
@@ -112,11 +102,11 @@ padding-right: 10px;
     text-align: right;
 }
 .step2{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 10px;
-    }
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding-left: 10px;
+}    
 .step2 h3, .step2 p{
     text-align: left;
 }
@@ -134,10 +124,7 @@ padding-right: 10px;
     display: flex;
     flex-wrap: wrap;
 }
-.clients1{
-    width: 50%;
-}
-.clients2{
+.clients1, .clients2{
     width: 50%;
 }
 .client{
@@ -149,6 +136,17 @@ padding-right: 10px;
     justify-content: space-around;
     /* равномерное расположение карточки клиента по вертикали */
     padding-top: 10px;
+}
+
+.footer-block{
+    margin-top: 45px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    height: 90px;
+}
+.footer-block .links{
+    padding-top: 20px;
 }
 
 .container-awards{
@@ -171,22 +169,10 @@ padding-right: 10px;
     padding-left: 10px;
 }
 
-.footer{
-    padding-top: 45px;
-}
-.footer-block{
-    width: 100%;
-    text-align: center;
-    background-color: black;
-    height: 60px;
-}
-.footer-block .links{
-    padding-top: 10px;
-}
-
 #slider-container{
     position: relative;
     overflow: hidden;
+    /* для того чтобы не видно было обрезанные картинки */
     width: 1000px;
     height: 550px; 
     padding-top: 25px;
@@ -203,7 +189,7 @@ padding-right: 10px;
     position: relative;
     display: flex;
     align-items: center;
-    /* расположение текста по центру картинки */
+    /* расположение текста по центру картинки по вертикали*/
 }
 .slide1 p{
     position: absolute;
@@ -220,6 +206,7 @@ padding-right: 10px;
     position: absolute;
     top: 50%;
     cursor: pointer;
+    /* Устанавливает форму курсора, когда он находится в пределах элемента */
     background: none; 
     border: transparent; /* прозрачный фон и граница у кнопок */
 }
@@ -234,10 +221,6 @@ padding-right: 10px;
 .cards{
     padding-top: 25px;
 }
-.card-body p{
-    font-weight: 100;
-    /* толщина шрифта вкарточках проектов */
- } 
 
 .contact-block{
     display: flex;
@@ -254,6 +237,5 @@ padding-right: 10px;
 }
 .contacts p{
     padding-top: 10px;
-    line-height: normal;
     text-align: left;
 }
