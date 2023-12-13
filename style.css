@@ -57,13 +57,7 @@
     padding-bottom: 30px;
     width: 100%; /* занимает 100% ширины */
 } 
-.container-steps{
-    background-color: black;
-    color: #f9f9f9;
-    padding-top: 20px;  /* отступ сверху */
-    padding-bottom: 30px;
-    width: 100%; /* занимает 100% ширины */
-} 
+
 h2{
     text-align: center; /*расположение текста по центру */
     font-size: 35px;
@@ -74,70 +68,111 @@ h2{
     font-size: 20px;
     line-height: 50px;     /* расстояние между строками */
 }
-.step p{
+.container-steps{
+    background-color: black;
+    color: #f9f9f9;
+    padding-top: 20px;  /* отступ сверху */
+    padding-bottom: 30px;
+    /* width: 100%; занимает 100% ширины */
+} 
+.step p{ 
     text-align: center; /*расположение текста по центру */
     font-size: 20px;
     line-height: 50px;     /* расстояние между строками */
-}
-.steps1-2{
+} 
+.steps{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    /* деление на колонки */
+}
+.steps1, .steps2{
+    width: 50%;
+}
+.step1, .step2{
+    height: 292px;
+    /* высота одной карточки */
+}
+
+.step1-text h3, .step2-text h3{
+    font-size: 20px;
+    font-weight: 100;
+    font-style: normal;    
+}
+.step1-text p, .step2-text p{
+    font-size: 17px;
 }
 .step1{
-    justify-content: flex-end;
+display: flex;
+flex-direction: column;
+align-items: end;
+padding-right: 10px;
 }
-.step1-text h3{
-    font-size: 20px;
-    font-weight: 100;
-    font-style: normal;    
+.step1 h3, .step1 p{
+    text-align: right;
 }
-.step2-text h3{
-    font-size: 20px;
-    font-weight: 100;
-    font-style: normal;    
+.step2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    }
+.step2 h3, .step2 p{
+    text-align: left;
 }
-.step1-text p{
-    font-size: 17px;
-    /* width: 50%; */
-}
-.step2-text p{
-    font-size: 17px;
-    /* width: 50%; */
+.steps img{
+    padding-bottom: 10px;
 }
 
 .container-clients{
     padding-top: 20px;    /* отступ сверху */
     padding-bottom: 30px;
-    width: 100%; /* занимает 100% ширины */
 }
 .clients{
     padding-top: 30px;
-    width: 50%;
-    
-
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
-    /* распределили по контейнеру */
-    align-content: stretch;
-    /* Строки равномерно растягиваются по высоте */
-    justify-items: center;
-    
+}
+.clients1{
+    width: 50%;
+}
+.clients2{
+    width: 50%;
 }
 .client{
-    width: 435px;
-    height: 265px;
-    
+    height: 265px;    /* одинаковая высота блока клиента иконок */
     display: flex;
-    justify-content: center;
-    align-content: stretch;
+    flex-direction: column;
+    align-items: center; 
+    /* расположение текста и иконки по центру  */
+    justify-content: space-around;
+    /* равномерное расположение карточки клиента по вертикали */
+    padding-top: 10px;
 }
-.client p{
-    text-align: center;
+
+.container-awards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* разделение на 2 столбца */
+}
+.awards1, .awards2{
+    width: 50%;
+}
+.award{
+    display: flex;
+    height: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+.award-text{
+    padding-left: 10px;
 }
 
 .footer{
-    padding-top: 25px;
+    padding-top: 45px;
 }
 .footer-block{
     width: 100%;
@@ -149,28 +184,60 @@ h2{
     padding-top: 10px;
 }
 
-
-
-.carousel-inner img{
+#slider-container{
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 550px; 
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.slide{
+    position: absolute;
+    width: 100%;
+}
+.slide img{
     filter: brightness(70%); /* затемнение картинок на слайде */
 }
-.carousel-inner h5{
-    font-size: 45px;
-}
-.carousel-inner p{
-    font-size: 20px;
-}
-.carousel-caption d-none d-md-block{
-    /* display: flex;
+.slide1{
+    position: relative;
+    display: flex;
     align-items: center;
-    justify-content: center; */
-    /* vertical-align: middle; */
+    /* расположение текста по центру картинки */
+}
+.slide1 p{
+    position: absolute;
+    font-size: 23px;
+    text-align: center;
+    color: #f9f9f9;
+    line-height: 38px;
+    /* расстояние между строками */
+    width: 90%;
+    left: 5%;
+    /* центрирование текста от стрелок */
+}
+#slider-container button{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    background: none; 
+    border: transparent; /* прозрачный фон и граница у кнопок */
 }
 
+#prevBtn{
+    left: 5px;
+}
+#nextBtn{
+    right: 5px;
+}
+
+.cards{
+    padding-top: 25px;
+}
 .card-body p{
     font-weight: 100;
     /* толщина шрифта вкарточках проектов */
-}
+ } 
 
 .contact-block{
     display: flex;
